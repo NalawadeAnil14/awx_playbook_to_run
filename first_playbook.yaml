@@ -10,6 +10,11 @@
       set_fact: 
         awx_priv_data_dir: "{{ lookup('env','AWX_PRIVATE_DATA_DIR') }}"
 
-    - name: Display hello message
+    - name: Get content inside AWX privata data directory
+      command: ls -ltr "{{ awx_priv_data_dir }}"
+      register: dir_contents
+
+    - name: Show contents of AWX_PRIVATE_DATA_DIR
       debug:
-        msg: "{{ awx_priv_data_dir }}"      
+        var: dir_contents.stdout_lines    
+
