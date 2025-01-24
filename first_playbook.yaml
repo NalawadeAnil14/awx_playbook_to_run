@@ -7,11 +7,11 @@
         msg: "Hello world!"
 
     - name: Check value of AWX privata data directory      
-      set_fact: 
-        awx_priv_data_dir: "{{ lookup('env','AWX_PRIVATE_DATA_DIR') }}"
+      debug: 
+        msg: "{{ lookup('env','AWX_PRIVATE_DATA_DIR') }}"
 
     - name: Get content inside AWX privata data directory
-      command: ls -ltr "{{ awx_priv_data_dir }}"
+      shell: ls -ltr "{{ lookup('env','AWX_PRIVATE_DATA_DIR') }}"
       register: dir_contents
 
     - name: Show contents of AWX_PRIVATE_DATA_DIR
