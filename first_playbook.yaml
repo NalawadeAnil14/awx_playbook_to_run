@@ -5,3 +5,11 @@
     - name: Display hello message
       debug: 
         msg: "Hello world!"
+
+    - name: Check value of AWX privata data directory      
+      set_fact: 
+        awx_priv_data_dir: "{{ lookup('env','AWX_PRIVATE_DATA_DIR') }}"
+
+    - name: Display hello message
+      debug:
+        msg: "{{ awx_priv_data_dir }}"      
