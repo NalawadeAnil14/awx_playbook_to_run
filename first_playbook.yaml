@@ -1,6 +1,6 @@
 ---
 - name: Hello world playbook
-  hosts: awx_target
+  hosts: awx_target_servers
   tasks: 
     - name: Display hello message
       debug: 
