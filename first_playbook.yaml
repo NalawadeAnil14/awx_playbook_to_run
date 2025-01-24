@@ -10,11 +10,11 @@
       debug: 
         msg: "{{ lookup('env','AWX_PRIVATE_DATA_DIR') }}"
 
-    - name: Get content inside AWX privata data directory
-      shell: ls -ltr "{{ lookup('env','AWX_PRIVATE_DATA_DIR') }}"
-      register: dir_contents
-
-    - name: Show contents of AWX_PRIVATE_DATA_DIR
-      debug:
-        var: dir_contents.stdout_lines    
+          #    - name: Get content inside AWX privata data directory
+          #      shell: ls -ltr "{{ lookup('env','AWX_PRIVATE_DATA_DIR') }}"
+          #      register: dir_contents
+          #
+          #    - name: Show contents of AWX_PRIVATE_DATA_DIR
+          #      debug:
+          #        var: dir_contents.stdout_lines    
 
