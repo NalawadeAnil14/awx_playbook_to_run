@@ -1,6 +1,6 @@
 ---
 - name: Hello world playbook
-  hosts: awx_target_servers
+  hosts: aws_ec2
   tasks: 
     - name: Display hello message
       debug: 
