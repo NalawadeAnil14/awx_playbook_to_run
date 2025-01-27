@@ -1,3 +1,4 @@
 ---
 collections: 
-  - nalawadeanil14.my_collection
+  - name: nalawadeanil14.my_collection
+    version: ">=1.0.0"
