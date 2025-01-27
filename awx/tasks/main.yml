@@ -1,0 +1,6 @@
+---
+# tasks file for awx
+
+- name: This hello is from role 
+  debug: 
+    msg: "Hello from role" 

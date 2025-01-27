@@ -1,6 +1,9 @@
 ---
 - name: Hello world playbook
   hosts: aws_ec2
+  roles: 
+    - awx
+  
   tasks: 
     - name: Display hello message
       debug: 
