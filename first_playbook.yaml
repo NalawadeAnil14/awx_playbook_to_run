@@ -9,6 +9,11 @@
       debug: 
         msg: "Hello world!"
 
+    - name: Add user detail in file 
+      nalawadeanil14.my_collection.store_data:
+        name: "Anil"
+        age: 30  
+
     - name: Check value of AWX privata data directory      
       debug: 
         msg: "{{ lookup('env','AWX_PRIVATE_DATA_DIR') }}"
